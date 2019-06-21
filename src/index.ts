@@ -1,3 +1,3 @@
-export const foo = () => 'foo bar'
+import Editor from './WealthyEditor'
 
-export default { foo }
+export default Editor

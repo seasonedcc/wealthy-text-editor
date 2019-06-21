@@ -1,12 +1,12 @@
-# LIBRARY_NAME
+# Wealthy Text Editor
 
-LIBRARY_NAME is a library that...
+Wealthy Text Editor is a library that...
 
 A simple "Hello world" would look like this:
 
 ```js
 // src/App.js
-import new-react-lib from 'new-react-lib'
+import wealthy-text-editor from 'wealthy-text-editor'
 
 export default props => (
   <div />

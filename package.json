@@ -1,12 +1,12 @@
 {
-  "name": "new-react-lib",
+  "name": "wealthy-text-editor",
   "version": "1.1.3",
   "description": "CRUD made easy. REST data layer abstraction library.",
   "author": "SeasonedSoftware",
   "license": "MIT",
-  "repository": "SeasonedSoftware/new-react-lib",
-  "main": "dist/new-react-lib.cjs.js",
-  "module": "dist/new-react-lib.esm.js",
+  "repository": "SeasonedSoftware/wealthy-text-editor",
+  "main": "dist/wealthy-text-editor.cjs.js",
+  "module": "dist/wealthy-text-editor.esm.js",
   "types": "dist/types/index.d.ts",
   "engines": {
     "node": ">=8",
@@ -27,6 +27,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
+    "@material-ui/core": "^4.1.1",
+    "@material-ui/icons": "^4.2.0",
     "prop-types": "15.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -37,10 +39,14 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@material-ui/core": "^4.1.1",
+    "@material-ui/icons": "^4.2.0",
+    "@types/lodash": "^4.14.134",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
     "cross-env": "^5.2.0",
     "gh-pages": "^2.0.1",
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^3.0.1",
@@ -52,11 +58,15 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.0.3",
     "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-uglify": "^6.0.2",
     "typescript": "^3.5.2"
   },
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "quill-drag-and-drop-module": "^0.3.0",
+    "react-quill": "^1.3.3"
+  }
 }

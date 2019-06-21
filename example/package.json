@@ -1,16 +1,17 @@
 {
-  "name": "new-react-lib-example",
-  "homepage": "https://SeasonedSoftware.github.io/new-react-lib",
+  "name": "wealthy-text-editor-example",
+  "homepage": "https://SeasonedSoftware.github.io/wealthy-text-editor",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.1.1",
     "@reach/router": "latest",
-    "new-react-lib": "link:..",
     "prop-types": "latest",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "latest"
+    "react-scripts": "latest",
+    "wealthy-text-editor": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,0 +1,60 @@
+.wealthy-editor {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.wealthy-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wealthy-upload {
+  margin: 0 15px -2px;
+  max-width: 40px;
+  position: relative;
+}
+
+.wealthy-upload .wealthy-uploading-img {
+  max-width: 100%;
+  filter: opacity(.7);
+  border-radius: 10px;
+}
+
+.wealthy-upload .wealthy-loading {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+
+.quill {
+  display: flex;
+  flex: 1;
+  color: #333;
+  background-color: white;
+}
+
+.ql-editor {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.ql-container {
+  flex: 1;
+}
+
+.ql-tooltip.ql-editing .ql-tooltip-editor input {
+  position: relative;
+}
+
+.ql-tooltip.ql-editing .ql-tooltip-editor input {
+  position: relative !important;
+}
+
+.ql-tooltip.ql-editing .ql-toolbar {
+  display: none;
+}
