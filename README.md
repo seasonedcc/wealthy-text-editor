@@ -1,4 +1,4 @@
-![pimp-pimp-156107936732134](https://user-images.githubusercontent.com/566971/59890663-4c92f900-93a8-11e9-8ff5-10d3ebb0af88.gif)
+![pimp-pimp-156114760187876](https://user-images.githubusercontent.com/566971/59948615-0345b680-9447-11e9-974c-87d35a65a676.gif)
 
 ```js
 // src/App.js
