@@ -17,7 +17,7 @@ const fileToBase64 = async file => {
 }
 
 const handleImageUpload = async file => {
-  const img = fileToBase64(file)
+  const img = await fileToBase64(file)
   return new Promise(resolve =>
     setTimeout(() => {
       resolve(img)
