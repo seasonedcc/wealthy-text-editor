@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53cdafad7c34d376f33a56fc29e21db8",
+    "revision": "6b1794ae28029f8598403672dfdb04d5",
     "url": "/wealthy-text-editor/index.html"
   },
   {
-    "revision": "3787250fa43c6e91e683",
+    "revision": "3a67c09eace9e6c31168",
     "url": "/wealthy-text-editor/static/css/main.bd36a7d7.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wealthy-text-editor/static/js/2.dd9dc47b.chunk.js"
   },
   {
-    "revision": "3787250fa43c6e91e683",
-    "url": "/wealthy-text-editor/static/js/main.bf8f08bc.chunk.js"
+    "revision": "3a67c09eace9e6c31168",
+    "url": "/wealthy-text-editor/static/js/main.26fd06b8.chunk.js"
   },
   {
     "revision": "dfae548be16daf8b0fb2",
