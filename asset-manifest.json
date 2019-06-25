@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wealthy-text-editor/static/css/main.bd36a7d7.chunk.css",
+    "main.js": "/wealthy-text-editor/static/js/main.bf8f08bc.chunk.js",
+    "main.js.map": "/wealthy-text-editor/static/js/main.bf8f08bc.chunk.js.map",
+    "runtime~main.js": "/wealthy-text-editor/static/js/runtime~main.7076fc43.js",
+    "runtime~main.js.map": "/wealthy-text-editor/static/js/runtime~main.7076fc43.js.map",
+    "static/js/2.dd9dc47b.chunk.js": "/wealthy-text-editor/static/js/2.dd9dc47b.chunk.js",
+    "static/js/2.dd9dc47b.chunk.js.map": "/wealthy-text-editor/static/js/2.dd9dc47b.chunk.js.map",
+    "index.html": "/wealthy-text-editor/index.html",
+    "precache-manifest.51fc44a6f0152eaa96545f26bdb7bdfb.js": "/wealthy-text-editor/precache-manifest.51fc44a6f0152eaa96545f26bdb7bdfb.js",
+    "service-worker.js": "/wealthy-text-editor/service-worker.js",
+    "static/css/main.bd36a7d7.chunk.css.map": "/wealthy-text-editor/static/css/main.bd36a7d7.chunk.css.map"
+  }
+}
