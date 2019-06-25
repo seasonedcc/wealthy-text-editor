@@ -157,7 +157,7 @@ const WealthyEditor = ({
     return null
   }
 
-  function textChanged(text: string, foo: any, bar: any) {
+  function textChanged(text: string) {
     setText(text)
     debouncedChange(text)
     const editorObject = getFullEditor()
