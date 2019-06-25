@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wealthy-text-editor/static/css/main.bd36a7d7.chunk.css",
-    "main.js": "/wealthy-text-editor/static/js/main.26fd06b8.chunk.js",
-    "main.js.map": "/wealthy-text-editor/static/js/main.26fd06b8.chunk.js.map",
+    "main.css": "/wealthy-text-editor/static/css/main.5bccd6cc.chunk.css",
+    "main.js": "/wealthy-text-editor/static/js/main.2b9dc05e.chunk.js",
+    "main.js.map": "/wealthy-text-editor/static/js/main.2b9dc05e.chunk.js.map",
     "runtime~main.js": "/wealthy-text-editor/static/js/runtime~main.7076fc43.js",
     "runtime~main.js.map": "/wealthy-text-editor/static/js/runtime~main.7076fc43.js.map",
-    "static/js/2.dd9dc47b.chunk.js": "/wealthy-text-editor/static/js/2.dd9dc47b.chunk.js",
-    "static/js/2.dd9dc47b.chunk.js.map": "/wealthy-text-editor/static/js/2.dd9dc47b.chunk.js.map",
+    "static/js/2.15d3f57e.chunk.js": "/wealthy-text-editor/static/js/2.15d3f57e.chunk.js",
+    "static/js/2.15d3f57e.chunk.js.map": "/wealthy-text-editor/static/js/2.15d3f57e.chunk.js.map",
     "index.html": "/wealthy-text-editor/index.html",
-    "precache-manifest.645f34fc971c04cd9f9f88a65ae3fbe1.js": "/wealthy-text-editor/precache-manifest.645f34fc971c04cd9f9f88a65ae3fbe1.js",
+    "precache-manifest.293ea94dfb279022034d797c912d52fe.js": "/wealthy-text-editor/precache-manifest.293ea94dfb279022034d797c912d52fe.js",
     "service-worker.js": "/wealthy-text-editor/service-worker.js",
-    "static/css/main.bd36a7d7.chunk.css.map": "/wealthy-text-editor/static/css/main.bd36a7d7.chunk.css.map"
+    "static/css/main.5bccd6cc.chunk.css.map": "/wealthy-text-editor/static/css/main.5bccd6cc.chunk.css.map"
   }
 }
