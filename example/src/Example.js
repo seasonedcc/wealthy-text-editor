@@ -1,6 +1,8 @@
 import React from 'react'
 import WealthyEditor from 'wealthy-text-editor'
-import { Card } from '@material-ui/core'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
+import { Card, CardHeader, CardContent } from '@material-ui/core'
 
 const fileToBase64 = async file => {
   const reader = new FileReader()
@@ -26,13 +28,28 @@ const handleImageUpload = async file => {
 }
 
 const Example = () => (
-  <Card elevation={4} style={{ display: 'flex', flex: 1, overflow: 'visible' }}>
-    <WealthyEditor
-      onImageUpload={handleImageUpload}
-      counter
-      onChange={console.log}
-      initialText={text}
-    />
+  <Card elevation={4} style={{ overflow: 'visible' }}>
+    <CardHeader title="WealthyEditor sample" />
+    <CardContent>
+      <WealthyEditor
+        onImageUpload={handleImageUpload}
+        counter
+        onChange={console.log}
+        initialText={text}
+      />
+    </CardContent>
+    <SyntaxHighlighter language="javascript" style={prism}>
+      {`
+  import WealthyEditor from 'wealthy-text-editor'
+
+  <WealthyEditor
+    onImageUpload={backendHandleImageUpload}
+    counter
+    onChange={console.log}
+    initialText="<h1>How a Rare..."
+  />
+              `}
+    </SyntaxHighlighter>
   </Card>
 )
 

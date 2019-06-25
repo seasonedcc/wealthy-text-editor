@@ -11,6 +11,7 @@
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "latest",
+    "react-syntax-highlighter": "^10.3.0",
     "wealthy-text-editor": "link:.."
   },
   "scripts": {
