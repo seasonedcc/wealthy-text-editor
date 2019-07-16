@@ -12,6 +12,7 @@
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "latest",
     "react-syntax-highlighter": "^11.0.2",
+    "uploods": "^0.5.1",
     "wealthy-text-editor": "link:.."
   },
   "scripts": {

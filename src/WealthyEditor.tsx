@@ -1,21 +1,13 @@
-import React, { useState, useRef, useMemo } from 'react'
+import React, { useState, useContext, useRef, useMemo } from 'react'
 import ReactQuill, { Quill } from 'react-quill'
-// @ts-ignore
 import debounce from 'lodash/debounce'
 import { Breadcrumbs, Typography, CircularProgress } from '@material-ui/core'
+import { Context, Uploods } from 'uploods'
 import { fileToBase64 } from './utils'
 import 'quill-drag-and-drop-module'
 import './index.css'
 import 'react-quill/dist/quill.bubble.css'
-
-type Props = {
-  initialText: string
-  onChange: (a: string) => void
-  onImageUpload?: (a: File) => Promise<string>
-  counter?: boolean
-  delay?: number
-  disableLists?: boolean
-}
+import { UploodAPIConfig, FileData } from 'uploods/dist/types/typeDeclarations'
 
 const draggables = [
   {
@@ -29,9 +21,14 @@ const WealthyEditor = ({
   initialText = '',
   onChange,
   delay = 700,
-  onImageUpload,
   disableLists,
+  disableUpload,
+  uploodsMaxDimension,
+  uploodsQuality,
+  uploodsPrefix = 'wealthy-text-editor',
+  uploodsOverwrite,
   counter,
+  config,
 }: Props) => {
   const [text, setText] = useState(initialText)
   const [uploading, setUploading] = useState()
@@ -39,6 +36,13 @@ const WealthyEditor = ({
   const editor: React.MutableRefObject<Editor | null> = useRef(null)
   const fileInput: React.MutableRefObject<HTMLInputElement | null> = useRef(
     null,
+  )
+
+  // set up uploods
+  const inheritedConfig = useContext(Context)
+  const api = useMemo(
+    () => new Uploods((config || inheritedConfig) as UploodAPIConfig),
+    [],
   )
 
   const debouncedChange = useMemo(
@@ -53,7 +57,7 @@ const WealthyEditor = ({
           [{ header: 1 }, { header: 2 }],
           ['bold', 'italic', 'underline', 'blockquote'],
           disableLists ? [] : [{ list: 'ordered' }, { list: 'bullet' }],
-          onImageUpload ? ['link', 'image'] : ['link'],
+          disableUpload ? ['link'] : ['link', 'image'],
           ['clean'],
         ],
         handlers: {
@@ -123,15 +127,18 @@ const WealthyEditor = ({
     }
   }
 
-  async function uploadImage(file: File): Promise<string | ArrayBuffer | null> {
+  async function uploadImage(file: File): Promise<string | undefined> {
+    if (disableUpload) return undefined
     const fileString = await fileToBase64(file)
-    if (onImageUpload) {
-      setUploading(fileString)
-      const imageUrl = await onImageUpload(file)
-      setUploading(null)
-      return imageUrl
-    }
-    return fileString
+    setUploading(fileString)
+    const fileData: FileData = await api.upload(file, {
+      overwrite: uploodsOverwrite,
+      quality: uploodsQuality,
+      maxDimension: uploodsMaxDimension,
+      prefix: uploodsPrefix,
+    })
+    setUploading(null)
+    return fileData.url
   }
 
   function imageHandler() {
@@ -174,6 +181,20 @@ interface FullEditor {
 
 interface Editor extends ReactQuill {
   makeUnprivilegedEditor: (t: Quill) => FullEditor
+}
+
+type Props = {
+  initialText: string
+  onChange: (a: string) => void
+  counter?: boolean
+  delay?: number
+  uploodsOverwrite?: boolean
+  uploodsMaxDimension?: number
+  uploodsQuality?: number
+  uploodsPrefix: string
+  disableLists?: boolean
+  disableUpload?: boolean
+  config?: UploodAPIConfig
 }
 
 export default WealthyEditor
