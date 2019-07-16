@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wealthy-text-editor/precache-manifest.293ea94dfb279022034d797c912d52fe.js"
+  "/wealthy-text-editor/precache-manifest.40e36e9e70667a1f843109bdfc893c13.js"
 );
 
 self.addEventListener('message', (event) => {
