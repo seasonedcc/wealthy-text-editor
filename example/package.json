@@ -5,14 +5,14 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.2.0",
+    "@material-ui/core": "link:../node_modules/@material-ui/core",
     "@reach/router": "latest",
     "prop-types": "latest",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "latest",
     "react-syntax-highlighter": "^11.0.2",
-    "uploods": "^0.5.1",
+    "uploods": "link:../node_modules/uploods",
     "wealthy-text-editor": "link:.."
   },
   "scripts": {

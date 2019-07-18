@@ -3,6 +3,7 @@ import WealthyEditor from 'wealthy-text-editor'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import prism from 'react-syntax-highlighter/dist/esm/styles/prism/prism'
 import { Card, CardHeader, CardContent } from '@material-ui/core'
+import { Provider } from 'uploods'
 
 const Example = () => {
   const [config, setConfig] = useState({
@@ -18,34 +19,36 @@ const Example = () => {
   }, [config.apiKey, config.storageBucket])
 
   return (
-    <Card elevation={4} style={{ overflow: 'visible' }}>
-      <CardHeader title="WealthyEditor sample" />
-      <CardContent>
-        <WealthyEditor
-          config={config}
-          uploodsMaxDimension={400}
-          uploodsOverwrite
-          counter
-          onChange={console.log}
-          initialText={text}
-        />
-      </CardContent>
-      <SyntaxHighlighter language="javascript" style={prism}>
-        {`
-  import WealthyEditor from 'wealthy-text-editor'
+    <Provider {...config}>
+      <Card elevation={4} style={{ overflow: 'visible' }}>
+        <CardHeader title="WealthyEditor sample" />
+        <CardContent>
+          <WealthyEditor
+            uploodsMaxDimension={400}
+            uploodsOverwrite
+            counter
+            onChange={console.log}
+            initialText={text}
+          />
+        </CardContent>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
+import { Provider } from 'uploods'
+import WealthyEditor from 'wealthy-text-editor'
 
+<Provider apiKey="MyFirebaseKey" storageBucket="MyBucket">
   <WealthyEditor
     counter
-    config={{ apiKey: 'MyFirebaseKey', storageBucket: 'MyBucket' }}
     uploodsOverwrite
     uploodsMaxDimension={400}
     uploodsPrefix="some-folder/user-profiles"
     onChange={console.log}
     initialText="<h1>How a Rare..."
   />
-              `}
-      </SyntaxHighlighter>
-    </Card>
+</Provider>`}
+        </SyntaxHighlighter>
+      </Card>
+    </Provider>
   )
 }
 
