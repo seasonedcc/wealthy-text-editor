@@ -16,8 +16,6 @@ const config = {
     'react',
     'react-dom',
     '@material-ui/core',
-    '@material-ui/icons',
-    'firebase',
     'uploods',
   ],
   plugins: [

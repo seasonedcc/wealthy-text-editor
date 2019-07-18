@@ -6,7 +6,9 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "link:../node_modules/@material-ui/core",
+    "@material-ui/icons": "^4.2.1",
     "@reach/router": "latest",
+    "firebase": "^6.3.0",
     "prop-types": "latest",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
