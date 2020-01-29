@@ -28,6 +28,7 @@ const WealthyEditor = ({
   uploodsPrefix = 'wealthy-text-editor',
   uploodsOverwrite,
   counter,
+  placeholder,
   config,
 }: Props) => {
   const [text, setText] = useState(initialText)
@@ -80,6 +81,7 @@ const WealthyEditor = ({
         value={text}
         onChange={textChanged}
         modules={modules}
+        placeholder={placeholder}
       />
       <div className="wealthy-controls">
         {uploading && (
@@ -195,6 +197,7 @@ type Props = {
   disableLists?: boolean
   disableUpload?: boolean
   config?: UploodAPIConfig
+  placeholder?: string
 }
 
 export default WealthyEditor
